@@ -165,9 +165,9 @@ if len(sys.argv) > 1:
 
         print(Log.info("Downloaded source from \033[34m%s\033[0m [\033[36m%i\033[0m bytes]" % (source.geturl(), len(data))))
 
-        for image in images:
+        for imageurl in images:
             try:
-                img = ImageUrl(image)
+                img = ImageUrl(imageurl)
                 img.saveToFile(ARGS["path"])
             except Exception as e:
                 print(Log.err(e))
